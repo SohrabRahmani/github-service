@@ -23,7 +23,7 @@ public class GithubController {
     @GetMapping("/repo")
     public Flux<Repository> githubRepositoriesList(
             @RequestParam(required = false) String created,
-            @RequestParam(required = false) String language,
+            @RequestParam(required = false, name = "programming_language") String language,
             @RequestParam(required = false, name = "per_page") Integer perPage,
             @RequestParam(required = false) Integer page,
             @RequestParam(required = false) String sort,
