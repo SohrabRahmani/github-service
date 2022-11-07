@@ -110,4 +110,19 @@ public class IntegrateTestApplicationTests {
                 .expectHeader().contentType(MediaType.APPLICATION_JSON)
                 .expectBodyList(Repository.class);
     }
+
+    @Test
+    public void github_badRequest_IntegrationTest() {
+        webTestClient.get().uri(
+                        uriBuilder -> uriBuilder
+                                .path(API_BASE_URL)
+                                .queryParam("per_page", "10")
+                                .queryParam("page", "1")
+                                .build())
+                .accept(MediaType.APPLICATION_JSON)
+                .exchange()
+                .expectStatus().isBadRequest()
+                .expectHeader().contentType(MediaType.APPLICATION_JSON)
+                .expectBodyList(Repository.class);
+    }
 }
