@@ -8,7 +8,7 @@ Through the following endpoint and parameters, you can get the list of GitHub re
 - Parameter:
     - created:  Using this parameter, can filter the date of repositories creation by accepting smaller and larger
       formats, such as all repos created after 2019و can call them with this format: ">2019-01-01"
-    - language: Using this parameter, can filter the programing language of repositories
+    - programming_language: Using this parameter, can filter the programing language of repositories
     - per_page: Using this parameter, can specify the number of repository per page to show
     - page:     Using this parameter, can specify the page number to show
     - sort:     Using this parameter, can specify sort the result by some parameter like star, created
